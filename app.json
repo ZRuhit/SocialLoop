@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Social_Loop",
-    "slug": "Social_Loop",
+    "name": "MAD_Project",
+    "slug": "MAD_Project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "socialloop",
+    "scheme": "madproject",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
