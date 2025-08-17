@@ -48,12 +48,18 @@ export default defineSchema({
         receiverId: v.id("users"),
         senderId: v.id("users"),
         type: v.union(v.literal("like"), v.literal("comment"), v.literal("follow")),
-        postId: v.optional(v.id("comments")),
-    }).index("by_receiver", ["receiverId"]),
+        postId: v.optional(v.id("posts")),
+        commentId: v.optional(v.id("comments")),
+    })
+    .index("by_receiver", ["receiverId"])
+    .index("by_post", ["postId"]),
 
     bookmarks: defineTable({
         userId: v.id("users"),
         postId: v.id("posts"),
-    }).index("by_user_and_post", ["userId", "postId"]),
+    })
+    .index("by_user", ["userId"])
+    .index("by_post", ["postId"])
+    .index("by_user_and_post", ["userId", "postId"]),
 
 });
