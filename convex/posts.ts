@@ -121,7 +121,6 @@ export const toggleLike = mutation({
         });
       }
 
-      return true; // liked
-    }
+
   },
 });
